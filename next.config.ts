@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Other Next.js configurations...
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rickandmortyapi.com',
+        pathname: '/api/character/avatar/**',
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
