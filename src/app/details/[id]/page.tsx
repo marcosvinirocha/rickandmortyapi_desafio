@@ -1,10 +1,11 @@
 import React from 'react';
-import { getClient } from '@/app/ApolloClient';
+
 import GET_EPISODES from '@/queries/getAllEpisode';
 import { EpisodesData } from '@/types/types';
 import { Card, CardContent, CardHeader } from '@/components/card';
 import { Calendar } from 'lucide-react';
 import Image from 'next/image';
+import { getClient } from '@/lib/apollo';
 
 export default async function EpisodeDetails({
   params,
